@@ -14,7 +14,7 @@ const baseArgs = {
   seed
 }
 export default function Home() {
-  const [input, setInput] = useState('abstract, complexity,  organic, emerging organic, growth, black hole,network, strange colors, phyllotaxis, diatons, texture and depth, forces,  photo- realistic, oil bubbles, fire')
+  const [input, setInput] = useState('abstract, complexity, organic, emerging organic, growth, black hole, network, strange colors, phyllotaxis, diatons, texture and depth, forces,  photo- realistic, oil bubbles, fire')
   const [image, setImage] = useState(null)
   const [sceneData, setSceneData] = useState<any>(null)
   const [excalidrawAPI, setExcalidrawAPI] = useState<any>(null)
