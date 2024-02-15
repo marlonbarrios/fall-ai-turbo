@@ -60,7 +60,8 @@ export default function Home() {
 
   return (
     <main className="p-12">
-      <p className="text-xl mb-2">Fal SDXL Turbo</p>
+      <p className="text-xl mb-2">DUET IN LATENT SPACE | Fal SDXL Turbo</p>
+      <p className="text-xl mb-2">Performing with a text to image AI</p>
       <input
         className='border rounded-lg p-2 w-full mb-2'
         value={input}
@@ -75,7 +76,7 @@ export default function Home() {
         }}
       />
       <div className='flex'>
-        <div className="w-[550px] h-[570px]">
+        <div className="w-[700px] h-[720px]">
           {
             isClient && excalidrawExportFns && (
               <Comp
