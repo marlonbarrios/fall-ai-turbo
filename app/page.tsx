@@ -14,7 +14,7 @@ const baseArgs = {
   seed
 }
 export default function Home() {
-  const [input, setInput] = useState('very abstract design organism,  emerging organic, growth, strange and colors, with a lot of texture and depth, complexity. 3D,  black background')
+  const [input, setInput] = useState('abstract, complexity,  organic, emerging organic, growth, black hole,network, strange colors, phyllotaxis, diatons, texture and depth, forces,  photo- realistic, oil bubbles, fire')
   const [image, setImage] = useState(null)
   const [sceneData, setSceneData] = useState<any>(null)
   const [excalidrawAPI, setExcalidrawAPI] = useState<any>(null)
@@ -61,7 +61,7 @@ export default function Home() {
   return (
     <main className="p-12">
       <p className="text-xl mb-2">DUET IN LATENT SPACE | Fal SDXL Turbo</p>
-      <p className="text-xl mb-2">Performing with a text to image AI</p>
+      <p className="text-xl mb-2">Drawing together | Concept,programming and performance by Marlon Barrios Solano</p>
       <input
         className='border rounded-lg p-2 w-full mb-2'
         value={input}
