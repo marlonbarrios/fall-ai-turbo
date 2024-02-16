@@ -14,7 +14,7 @@ const baseArgs = {
   seed
 }
 export default function Home() {
-  const [input, setInput] = useState('abstract, complexity, organic, emerging organic, growth, black hole, network, strange colors, phyllotaxis, diatons, texture and depth, forces,  photo- realistic, oil bubbles, fire')
+  const [input, setInput] = useState('oil bubbles, fire, network of tendrils, strange colors,abstract, complexity, organic, emerging organic, growth, black hole, metapatterns, phyllotaxis, diatons, texture, voronoi, and depth, forces,  photo- realistic')
   const [image, setImage] = useState(null)
   const [sceneData, setSceneData] = useState<any>(null)
   const [excalidrawAPI, setExcalidrawAPI] = useState<any>(null)
@@ -53,7 +53,7 @@ export default function Home() {
       appState,
       quality: 0.5,
       files: excalidrawAPI.getFiles(),
-      getDimensions: () => { return {width: 450, height: 450}}
+      getDimensions: () => { return {width: 550, height: 550}}
     })
     return await new Promise(r => {let a=new FileReader(); a.onload=r; a.readAsDataURL(blob)}).then((e:any) => e.target.result)
   }
@@ -61,7 +61,8 @@ export default function Home() {
   return (
     <main className="p-12">
       <p className="text-xl mb-2">DUET IN LATENT SPACE | Fal SDXL Turbo</p>
-      <p className="text-xl mb-2">Drawing together | Concept,programming and performance by Marlon Barrios Solano</p>
+      <p className="text-xl mb-2">Drawing together | Concept, programming and performance by<a href='https://marlonbarrios.github.io/'> Marlon Barrios Solano</a></p>
+      <p className="text-xl mb-2"></p>
       <input
         className='border rounded-lg p-2 w-full mb-2'
         value={input}
@@ -76,7 +77,7 @@ export default function Home() {
         }}
       />
       <div className='flex'>
-        <div className="w-[700px] h-[720px]">
+        <div className="w-[550px] h-[570px]">
           {
             isClient && excalidrawExportFns && (
               <Comp
@@ -107,8 +108,8 @@ export default function Home() {
           image && (
             <Image
               src={image}
-              width={700}
-              height={700}
+              width={550}
+              height={550}
               alt='fal image'
             />
           )
