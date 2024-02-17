@@ -6,35 +6,39 @@ import Image from 'next/image'
 fal.config({
   proxyUrl: "/api/fal/proxy",
 })
-
 const seed = Math.floor(Math.random() * 100000)
-const baseArgs = {
-  sync_mode: true,
-  strength: .80,
-  seed
-}
+
 export default function Home() {
-  const [input, setInput] = useState('oil bubbles, fire, network of tendrils, strange colors,abstract, complexity, organic, emerging organic, growth, black hole, metapatterns, phyllotaxis, diatons, texture, voronoi, and depth, forces,  photo- realistic')
+  const [input, setInput] = useState('oil bubbles, fire, network of tendrils, strange colors, abstract, complexity, organic, emerging organic, growth, black hole, metapatterns, phyllotaxis, diatoms, texture, voronoi, and depth, forces, photo-realistic')
   const [image, setImage] = useState(null)
+  const [strength, setStrength] = useState(0.6) // Default strength value
   const [sceneData, setSceneData] = useState<any>(null)
   const [excalidrawAPI, setExcalidrawAPI] = useState<any>(null)
   const [_appState, setAppState] = useState<any>(null)
-  const [excalidrawExportFns, setexcalidrawExportFns] = useState<any>(null)
+  const [excalidrawExportFns, setExcalidrawExportFns] = useState<any>(null)
   const [isClient, setIsClient] = useState<boolean>(false)
-
   const [Comp, setComp] = useState<any>(null);
+
   useEffect(() => {
     import('@excalidraw/excalidraw').then((comp) => setComp(comp.Excalidraw))
   }, [])
+
   useEffect(() => { setIsClient(true) }, [])
+
   useEffect(() => {
     import('@excalidraw/excalidraw').then((module) =>
-      setexcalidrawExportFns({
+      setExcalidrawExportFns({
         exportToBlob: module.exportToBlob,
         serializeAsJSON: module.serializeAsJSON
       })
     );
   }, []);
+
+  const baseArgs = {
+    sync_mode: true,
+    strength: strength, // Use the strength state
+    seed
+  }
 
   const { send } = fal.realtime.connect('110602490-sdxl-turbo-realtime', {
     connectionKey: 'realtime-nextjs-app',
@@ -49,9 +53,9 @@ export default function Home() {
     if (!elements || !elements.length) return
     const blob = await excalidrawExportFns.exportToBlob({
       elements,
-      exportPadding: 0,
+      exportPadding: 10,
       appState,
-      quality: 0.5,
+      quality: 1,
       files: excalidrawAPI.getFiles(),
       getDimensions: () => { return {width: 550, height: 550}}
     })
@@ -62,7 +66,16 @@ export default function Home() {
     <main className="p-12">
       <p className="text-xl mb-2">DUET IN LATENT SPACE | Fal SDXL Turbo</p>
       <p className="text-xl mb-2">Drawing together | Concept, programming and performance by<a href='https://marlonbarrios.github.io/'> Marlon Barrios Solano</a></p>
-      <p className="text-xl mb-2"></p>
+      <input
+        type="range"
+        min="0"
+        max="1"
+        step="0.01"
+        value={strength}
+        className="w-full"
+        onChange={(e) => setStrength(parseFloat(e.target.value))}
+      />
+      <p>Strength: {strength}</p>
       <input
         className='border rounded-lg p-2 w-full mb-2'
         value={input}
@@ -77,7 +90,7 @@ export default function Home() {
         }}
       />
       <div className='flex'>
-        <div className="w-[550px] h-[570px]">
+        <div className="w-[550px] h-[550px]">
           {
             isClient && excalidrawExportFns && (
               <Comp
