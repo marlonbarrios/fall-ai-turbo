@@ -9,7 +9,7 @@ fal.config({
 const seed = Math.floor(Math.random() * 100000)
 
 export default function Home() {
-  const [input, setInput] = useState('human form, entagled with oil bubbles, fire, network of tendrils, strange colors, abstract, complexity, organic, emerging organic, growth, black hole, metapatterns, phyllotaxis, diatoms, texture, voronoi, and depth, forces, photo-realistic')
+  const [input, setInput] = useState('human form, human bodies, ghost entangled with oil bubbles, blood, fire, network of tendrils, veins,  strange colors, abstract, complexity, organic, emerging organic, growth, black hole, metapatterns, phyllotaxis, diatoms, texture, voronoi, and depth, forces, photo-realistic')
   const [image, setImage] = useState(null)
   const [strength, setStrength] = useState(0.6) // Default strength value
   const [sceneData, setSceneData] = useState<any>(null)
