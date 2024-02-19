@@ -20,7 +20,7 @@ export default function Home() {
   const [excalidrawExportFns, setExcalidrawExportFns] = useState<any>(null);
   const [isClient, setIsClient] = useState<boolean>(false);
   const [Comp, setComp] = useState<any>(null);
-  const [audioSrc] = useState('/ghosts2.mp3'); // Update this path to your audio file
+  const [audioSrc] = useState('/ghosts.mp3'); // Update this path to your audio file
 
   useEffect(() => {
     import('@excalidraw/excalidraw').then((comp) => setComp(comp.Excalidraw));
@@ -92,7 +92,7 @@ export default function Home() {
         }}
       />
       <div className='flex'>
-        <div className="w-[650px] h-[650px]">
+        <div className="w-[950px] h-[950px]">
           {
             isClient && excalidrawExportFns && (
               <Comp
@@ -130,7 +130,7 @@ export default function Home() {
             <Image
               src={image}
               width={950}
-              height={750}
+              height={950}
               alt='fal image'
             />
           )
