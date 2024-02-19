@@ -9,7 +9,7 @@ fal.config({
 const seed = Math.floor(Math.random() * 100000)
 
 export default function Home() {
-  const [input, setInput] = useState('oil bubbles, fire, network of tendrils, strange colors, abstract, complexity, organic, emerging organic, growth, black hole, metapatterns, phyllotaxis, diatoms, texture, voronoi, and depth, forces, photo-realistic')
+  const [input, setInput] = useState('human form, entagled with oil bubbles, fire, network of tendrils, strange colors, abstract, complexity, organic, emerging organic, growth, black hole, metapatterns, phyllotaxis, diatoms, texture, voronoi, and depth, forces, photo-realistic')
   const [image, setImage] = useState(null)
   const [strength, setStrength] = useState(0.6) // Default strength value
   const [sceneData, setSceneData] = useState<any>(null)
@@ -64,8 +64,8 @@ export default function Home() {
 
   return (
     <main className="p-12">
-      <p className="text-xl mb-2">DUET IN LATENT SPACE | Fal SDXL Turbo</p>
-      <p className="text-xl mb-2">Drawing together | Concept, programming and performance by<a href='https://marlonbarrios.github.io/'> Marlon Barrios Solano</a></p>
+      <p className="text-xl mb-2">DUET IN LATENT SPACE 01| Fal SDXL Turbo</p>
+      <p className="text-xl mb-2">In Pursuit of Ghosts | Concept, programming and performance by<a href='https://marlonbarrios.github.io/'> Marlon Barrios Solano</a></p>
       <input
         type="range"
         min="0"
