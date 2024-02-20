@@ -20,7 +20,7 @@ export default function Home() {
   const [excalidrawExportFns, setExcalidrawExportFns] = useState<any>(null);
   const [isClient, setIsClient] = useState<boolean>(false);
   const [Comp, setComp] = useState<any>(null);
-  const [audioSrc] = useState('/ghosts.mp3'); // Update this path to your audio file
+  const [audioSrc] = useState('/ghost_stolen.mp3'); // Update this path to your audio file
 
   useEffect(() => {
     import('@excalidraw/excalidraw').then((comp) => setComp(comp.Excalidraw));
@@ -67,7 +67,7 @@ export default function Home() {
 
   return (
     <main className="p-12">
-      <p className="text-xl mb-2">DUET IN LATENT SPACE 01| In Pursuit of Stolen Ghosts | Concept, programming and performance by<a href='https://marlonbarrios.github.io/'> Marlon Barrios Solano</a></p>
+      <p className="text-xl mb-2">DUET IN LATENT SPACE 01| In Pursuit of Stolen Ghosts | Concept, programming, sound design and performance by<a href='https://marlonbarrios.github.io/'> Marlon Barrios Solano</a></p>
      <input
         type="range"
         min="0"

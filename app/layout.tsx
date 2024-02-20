@@ -5,7 +5,7 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Duet in Latent Space',
+  title: 'In Pursuit of Stolen Ghosts | Duet in Latent Space',
   description: 'Programmed by Marlon Barrios Solano',
 }
 
