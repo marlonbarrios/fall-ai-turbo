@@ -11,7 +11,7 @@ fal.config({
 const seed = Math.floor(Math.random() * 100000);
 
 export default function Home() {
-  const [input, setInput] = useState('human form, human bodies,  aztec, mayan, yanomami, NOIR,  african, almost ghost entangled with oil bubbles like hanging from heaven, inner lights,  blood, fire, network of tendrils, veins, umbilical cords, strange colors, abstract, complexity, organic, emerging organic, growth, black hole, metapatterns, phyllotaxis, diatoms, texture, voronoi, and depth, forces, photo-realistic');
+  const [input, setInput] = useState('human form, human bodies,  aztec, mayan, yanomami, NOIR,  african, entangled with oil bubbles like hanging from heaven, inner lights,  blood, fire, network of tendrils, veins, umbilical cords, strange colors, abstract, complexity, organic, emerging organic, growth, black hole, metapatterns, phyllotaxis, diatoms, texture, voronoi, and depth, forces, photo-realistic');
   const [image, setImage] = useState(null);
   const [strength, setStrength] = useState(0.74); // Default strength value
   const [sceneData, setSceneData] = useState<any>(null);
@@ -92,7 +92,7 @@ export default function Home() {
         }}
       />
       <div className='flex'>
-        <div className="w-[950px] h-[950px]">
+        <div className="w-[650px] h-[650px]">
           {
             isClient && excalidrawExportFns && (
               <Comp
