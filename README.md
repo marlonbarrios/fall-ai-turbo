@@ -17,10 +17,11 @@ The concept of the "stolen ghost" is deeply personal to me, reflecting my feelin
 
 The project is an amalgamation of various elements including software development, a real-time text to image gerative AI space for performance as a live app that runs in the browser, a sound space crafted with Musicgen, and a drawing tool. Additionally, users/performer can immerse themselves in the experience by playing the soundtrack created specifically for the app. 
 
+
+https://github.com/marlonbarrios/in-pursuit-of-stolen-ghosts/assets/90220317/38c90e71-d029-418d-9691-0bee5fe64b51
+
+
 ### Features
-
-
-https://github.com/marlonbarrios/marlonbarrios/assets/90220317/05dc5553-46fe-451d-bfd1-9695b566142e
 
 - **LCM Turbo:** Leveraging the power of Fal.ai for (almost) real-time, instant text-to- and image-to-image conversion. The model creates images very fast  as if it is creating the drawing together.
 - **Excalidraw:** is a virtual whiteboard application that allows users to sketch hand-drawn diagrams and illustrations quickly and easily. It's designed to mimic the feel of sketching on paper, but with the convenience of digital tools. [Excalidraw](https://excalidraw.com). The output of the Excalidraw is sent to Fal.ai guided by the prompt.
