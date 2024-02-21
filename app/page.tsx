@@ -67,30 +67,11 @@ export default function Home() {
 
   return (
     <main className="p-12">
-      <p className="text-xl mb-2">DUET IN LATENT SPACE 01| In Pursuit of Stolen Ghosts | Concept, programming, sound design and performance by<a href='https://marlonbarrios.github.io/'> Marlon Barrios Solano</a></p>
-     <input
-        type="range"
-        min="0"
-        max="1"
-        step="0.01"
-        value={strength}
-        className="w-full"
-        onChange={(e) => setStrength(parseFloat(e.target.value))}
-      />
-      <p>Strength: {strength}</p>
-      <input
-        className='border rounded-lg p-2 w-full mb-2'
-        value={input}
-        onChange={async (e) => {
-          setInput(e.target.value);
-          let dataUrl = await getDataUrl();
-          send({
-            ...baseArgs,
-            prompt: e.target.value,
-            image_url: dataUrl
-          });
-        }}
-      />
+      <p className="text-xl mb-2">in pursuit of stolen ghosts | duet in <a href='https://en.wikipedia.org/wiki/Latent_spacelatent '>latent space</a> | concept, programming, sound design and performance by <a href='https://marlonbarrios.github.io/'>marlon barrios solano</a></p>
+      <p className="text-xl mb-2">created during art and research residency at <a href='https://lakestudiosberlin.com/'>Lake Studios Berlin</a> | February 2024</p>
+      <input className='border rounded-lg p-2 w-full mb-2' value={input} onChange={(e) => setInput(e.target.value)}/>
+      <p><input type="range" min="0" max="1" step="0.01" value={strength} onChange={(e) => setStrength(parseFloat(e.target.value))}/> | Strength: {strength}</p>
+     
       <div className='flex'>
         <div className="w-[650px] h-[650px]">
           {
