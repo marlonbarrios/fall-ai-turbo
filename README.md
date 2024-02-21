@@ -1,7 +1,7 @@
 
 # in pursuit of stoten ghosts | Duet in Latent Space
 
-![Image of performance](/https://github.com/marlonbarrios/bauhaus-queer/blob/mondrian/public/image.jpg "image or performance")
+![Image of performance](/https://github.com/marlonbarrios/fall-ai-turbo/blob/mondrian/public/ghost.png "image or performance")
 
 ## About the Project
 
