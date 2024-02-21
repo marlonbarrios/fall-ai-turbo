@@ -1,5 +1,5 @@
 
-# in pursuit of stoten ghosts | Duet in Latent Space
+# in pursuit of stoten ghosts | duet in latent space
 
 ![Image of performance](https://github.com/marlonbarrios/fall-ai-turbo/blob/mondrian/public/ghost.png "image or performance")
 
