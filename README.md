@@ -28,6 +28,8 @@ The project is an amalgamation of various elements including software developmen
 - **Live Application:** Experience the Bauhaus Time Traveler in action [here](https://in-pursuit-of-stolen-ghosts.vercel.app/).
 - **Marlon Barrios Solano:** For more about Marlon, his projects, and how you can support his work, visit his [Linktree](https://linktr.ee/marlonbarriososolano). 
 
+![Image of performance](https://github.com/marlonbarrios/fall-ai-turbo/blob/mondrian/public/ghost2.jpg "image or performance")
+
 ## Getting Started with LCM Turbo
 
 LCM Turbo allows you to transform text anmd visuals into generative visuals instantly. Follow these steps to set up and start using the app.
